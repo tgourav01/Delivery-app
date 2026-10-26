@@ -37,22 +37,18 @@ public class AdminController {
     private User getAdminUser(HttpSession session) {
         User u = (User) session.getAttribute("user");
         if (u == null) return null;
-
         User fresh = userRepo.findByEmail(u.getEmail());
         if (fresh == null) return null;
-
         if (fresh.getRole() != Role.ADMIN) return null; //  FIX
-
         return fresh;
     }
-
     @GetMapping("/all-approvals")
     public ResponseEntity<?> getAllApprovals(HttpSession session) {
         if (getAdminUser(session) == null)
             return ResponseEntity.status(403).body("Unauthorized");
         return ResponseEntity.ok(approvalRepo.findAll());
     }
-
+    
     @GetMapping("/pending-restaurants")
     public ResponseEntity<?> getPending(HttpSession session) {
         if (getAdminUser(session) == null)

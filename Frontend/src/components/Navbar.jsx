@@ -52,10 +52,10 @@ export default function Navbar({ cartCount, user, onLogout, theme, onToggleTheme
 
         {/* ── LOGO ── */}
         <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
-          <img src="/logo_nomzee.png" alt="NOMZEE"
+          <img src="/logo.png" alt="FOODZEE"
             style={{ width: 36, height: 36, borderRadius: 10, objectFit: 'cover' }} />
           <span style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: 22, color: 'var(--text)', letterSpacing: '-0.03em' }}>
-            NOMZEE
+            FOODZEE
           </span>
         </Link>
 

@@ -37,21 +37,18 @@ public class AuthController {
                 session.setAttribute("user", loggedUser);
                 return "Login successful";
             }
-
             return "Invalid credentials";
 
         } catch (RuntimeException e) {
             return e.getMessage(); // blocked case
         }
     }
-
     // LOGOUT
     @GetMapping("/logout")
     public String logout(HttpSession session) {
         session.invalidate();
         return "Logged out";
     }
-
     //  FIXED: GET CURRENT USER
     @GetMapping("/me")
     public ResponseEntity<?> getCurrentUser(HttpSession session) {
@@ -60,14 +57,11 @@ public class AuthController {
         if (u == null) {
             return ResponseEntity.status(401).body("Not logged in");
         }
-
         // 🔥 Fetch fresh user from DB (important for role updates)
         User fresh = repo.findByEmail(u.getEmail());
-
         if (fresh == null) {
             return ResponseEntity.status(401).body("User not found");
         }
-
         return ResponseEntity.ok(fresh);
     }
 }

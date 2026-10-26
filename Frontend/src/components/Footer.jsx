@@ -6,8 +6,8 @@ export default function Footer() {
       <div className="page-container" style={{ padding:'48px 24px 32px', display:'flex', justifyContent:'space-between', alignItems:'flex-start', gap:40, flexWrap:'wrap' }}>
         <div>
           <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:12 }}>
-            <img src="/logo_nomzee.png" alt="NOMZEE" style={{ width:34, height:34, borderRadius:9, objectFit:'cover' }}/>
-            <span style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, fontSize:20, letterSpacing:'-0.02em', color:'var(--text)' }}>NOMZEE</span>
+            <img src="/logo.png" alt="NOMZEE" style={{ width:34, height:34, borderRadius:9, objectFit:'cover' }}/>
+            <span style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, fontSize:20, letterSpacing:'-0.02em', color:'var(--text)' }}>FOODZEE</span>
           </div>
           <p style={{ color:'var(--text2)', fontSize:14, lineHeight:1.7, maxWidth:260 }}>
             Delivering happiness, one meal at a time. Order from the best restaurants near you.
@@ -31,18 +31,7 @@ export default function Footer() {
         </div>
       </div>
       <div style={{ borderTop:'1px solid var(--border)', padding:'18px 24px', textAlign:'center', fontSize:13, color:'var(--text3)' }}>
-        © 2026 NOMZEE. Made by{' '}
-        <a href="https://www.linkedin.com/in/d3bayansarkar/" target="_blank" rel="noopener noreferrer"
-          style={{ color:'var(--primary)', fontWeight:600, textDecoration:'none' }}
-          onMouseEnter={e => e.target.style.opacity='0.75'}
-          onMouseLeave={e => e.target.style.opacity='1'}
-        >Debayan</a>
-        {' & '}
-        <a href="https://www.linkedin.com/in/anuja-ghosal-10b10b2b2/" target="_blank" rel="noopener noreferrer"
-          style={{ color:'var(--primary)', fontWeight:600, textDecoration:'none' }}
-          onMouseEnter={e => e.target.style.opacity='0.75'}
-          onMouseLeave={e => e.target.style.opacity='1'}
-        >Anuja</a>
+        © 2026 FOODZEE. Made by{' Gourav Thakur ,Sahil Soni ,Priyanshu'}
       </div>
     </footer>
   )

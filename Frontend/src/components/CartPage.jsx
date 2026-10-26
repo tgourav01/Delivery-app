@@ -122,9 +122,9 @@ export default function CartPage({ user, toast, onOrderPlaced }) {
         key:         keyId,
         amount:      grandTotal * 100,   // paise
         currency:    'INR',
-        name:        'NOMZEE',
+        name:        'FOODZEE',
         description: `${cart.length} item${cart.length > 1 ? 's' : ''}`,
-        image:       '/logo_nomzee.png',
+        image:       '/logo.png',
         order_id:    orderId,
         handler: async (response) => {
           // 4. Verify signature on backend

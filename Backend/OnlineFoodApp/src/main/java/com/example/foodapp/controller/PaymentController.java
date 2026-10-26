@@ -47,7 +47,7 @@ public class PaymentController {
 		JSONObject orderRequest = new JSONObject();
 		orderRequest.put("amount", (int) (amount * 100)); // paise
 		orderRequest.put("currency", "INR");
-		orderRequest.put("receipt", "nomzee_rcpt_" + System.currentTimeMillis());
+		orderRequest.put("receipt", "fodzee_rcpt_" + System.currentTimeMillis());
 
 		Order razorpayOrder = client.orders.create(orderRequest);
 		System.out.println("Razorpay Order created: " + razorpayOrder);
